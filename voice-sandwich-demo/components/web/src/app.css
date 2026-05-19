@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Register src/lib so Tailwind scans Svelte components there; without this, production
+   builds only included utilities from App.svelte / index.html (~9kB CSS vs full styles). */
+@source "../index.html";
+@source "./lib";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
